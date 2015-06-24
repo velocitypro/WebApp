@@ -1,0 +1,19 @@
+<!-- Default home page -->
+<link type="text/css" href='http://sailsjs.org/styles/fonts.css' rel='stylesheet'/>
+<style>
+.window {          
+		    width: 100vw;
+			height: 100vh;
+        }
+ya-map {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+</style>
+<div class="window" ng-controller="MapsCtrl">
+<h1>{{message}}</h1>
+	<ya-map ya-zoom="10" ya-center="[37.44,55.72]" ya-after-init="route($target)">
+	<ya-geo-object ya-source="geoObjects[0]" ya-options="{balloonHasCloseButton:false,strokeColor:'#000000',strokeWidth:4,strokeOpacity:0.5}"></ya-geo-object>
+	</ya-map>
+</div>
