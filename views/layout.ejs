@@ -4,16 +4,31 @@
 	<meta charset="utf-8">
     <title><%- title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+	<link rel="stylesheet" href="/styles/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
   </head>
 
   <body ng-app='VelocityApp'>
+	  <nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">Velocity</a>
+		</div>
+		<div>
+		  <ul class="nav navbar-nav">
+			<li class="active"><a href="#">Map</a></li>
+			<li ><a href="#">Blog</a></li>
+			<li ><a href="#">Routes</a></li>
+			<li ><a href="#">About</a></li>
+		  </ul>
+		</div>
+	  </div>
+      </nav>
+	<div class="container">
     <%- body %>
-
+	</div>
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/require.js" 
-		data-main="/js/main.js"></script>
-    
+    <script src="/js/require.js" data-main="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
